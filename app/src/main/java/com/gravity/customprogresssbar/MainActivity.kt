@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import com.gravity.customprogressbar.CustomProgressBar
+import com.gravity.customprogressbar.CustomProgressBarScrollable
+import com.gravity.customprogressbar.CustomProgressModel
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), CustomProgressBarScrollable.OnProgressLabelInteractionListener {
+class MainActivity : AppCompatActivity(), CustomProgressBar.OnProgressLabelInteractionListener {
 
     private lateinit var focusChange: FocusChange
 
@@ -15,10 +18,11 @@ class MainActivity : AppCompatActivity(), CustomProgressBarScrollable.OnProgress
         setContentView(R.layout.activity_main)
 
 
-        var customProgressModel1 = CustomProgressModel(3, "1st from")
+        var customProgressModel1 = CustomProgressModel(3, "1st form")
         var customProgressModel2 = CustomProgressModel(4, "2nd form")
         var customProgressModel3 = CustomProgressModel(5, "3rd form")
         var customProgressModel4 = CustomProgressModel(3, "4th form")
+
         var customProgressModel5 = CustomProgressModel(5, "5th form")
         var customProgressModel6 = CustomProgressModel(5, "6th form")
         var customProgressModel7 = CustomProgressModel(5, "7th form")
@@ -29,10 +33,10 @@ class MainActivity : AppCompatActivity(), CustomProgressBarScrollable.OnProgress
         formsModelList += customProgressModel2
         formsModelList += customProgressModel3
         formsModelList += customProgressModel4
-        formsModelList += customProgressModel5
-        formsModelList += customProgressModel6
-        formsModelList += customProgressModel7
-        formsModelList += customProgressModel8
+        //formsModelList += customProgressModel5
+        //formsModelList += customProgressModel6
+        //formsModelList += customProgressModel7
+        //formsModelList += customProgressModel8
         custom_progress.addProgressForms(this, formsModelList)
 
         focusChange = FocusChange()

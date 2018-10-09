@@ -4,10 +4,10 @@
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="26dp"
-        android:paddingBottom="6dp">
+        android:layout_height="20dp">
 
         <LinearLayout
+            android:id="@+id/llDots"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -16,8 +16,8 @@
         <ProgressBar
             style="@style/CustomProgressBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:theme="@style/CustomProgressBar" />
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"/>
 
     </RelativeLayout>
 

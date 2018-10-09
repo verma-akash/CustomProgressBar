@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.gravity.customprogresssbar.MainActivity">
 
-    <com.gravity.customprogresssbar.CustomProgressBarScrollable
+    <com.gravity.customprogressbar.CustomProgressBar
         android:id="@+id/custom_progress"
         android:layout_width="match_parent"
         android:background="@color/blue"

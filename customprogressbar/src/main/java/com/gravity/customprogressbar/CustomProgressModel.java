@@ -1,4 +1,4 @@
-package com.gravity.customprogresssbar;
+package com.gravity.customprogressbar;
 
 /**
  * Created by Akash Verma on 21/04/18.

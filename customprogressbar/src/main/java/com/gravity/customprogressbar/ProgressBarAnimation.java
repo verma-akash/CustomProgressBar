@@ -1,4 +1,4 @@
-package com.gravity.customprogresssbar;
+package com.gravity.customprogressbar;
 
 import android.view.animation.Animation;
 import android.view.animation.Transformation;

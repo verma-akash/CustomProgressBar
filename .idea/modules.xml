@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CustomProgressSeekbar.iml" filepath="$PROJECT_DIR$/CustomProgressSeekbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customprogressbar/customprogressbar.iml" filepath="$PROJECT_DIR$/customprogressbar/customprogressbar.iml" />
     </modules>
   </component>
 </project>
