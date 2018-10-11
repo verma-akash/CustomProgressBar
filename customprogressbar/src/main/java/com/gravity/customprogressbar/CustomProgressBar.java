@@ -1,6 +1,7 @@
 package com.gravity.customprogressbar;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -27,6 +28,7 @@ import java.util.List;
 
 public class CustomProgressBar extends FrameLayout {
 
+    private int backgroundColor;
     private Context context;
     private LayoutInflater inflater;
     private View mView = null;
@@ -51,30 +53,36 @@ public class CustomProgressBar extends FrameLayout {
 
     public CustomProgressBar(@NonNull Context context) {
         super(context);
-        this.context = context;
-        init();
+        init(context);
     }
 
     public CustomProgressBar(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        this.context = context;
-        init();
+        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomProgressBar, 0, 0);
+        backgroundColor = attributes.getColor(R.styleable.CustomProgressBar_cps_background, getResources().getColor(android.R.color.white));
+        attributes.recycle();
+        init(context);
     }
 
     public CustomProgressBar(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.context = context;
-        init();
+        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomProgressBar, 0, 0);
+        backgroundColor = attributes.getColor(R.styleable.CustomProgressBar_cps_background, getResources().getColor(android.R.color.white));
+        attributes.recycle();
+        init(context);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public CustomProgressBar(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        this.context = context;
-        init();
+        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomProgressBar, 0, 0);
+        backgroundColor = attributes.getColor(R.styleable.CustomProgressBar_cps_background, getResources().getColor(android.R.color.white));
+        attributes.recycle();
+        init(context);
     }
 
-    void init() {
+    void init(Context context) {
+        this.context = context;
         inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         assert inflater != null;
         mView = inflater.inflate(R.layout.custom_progress_bar, this);
@@ -95,7 +103,8 @@ public class CustomProgressBar extends FrameLayout {
         imageWidth = labelImageViewList.get(0).getWidth();
     }
 
-    public void addProgressForms(OnProgressLabelInteractionListener listener, List<? extends CustomProgressModel> formsModelList) {
+    public void addProgressForms(OnProgressLabelInteractionListener listener,
+                                 List<? extends CustomProgressModel> formsModelList) {
         this.mListener = listener;
         this.formsModelList = formsModelList;
         inflateProgressViews();
