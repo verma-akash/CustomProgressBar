@@ -2,6 +2,9 @@
 
 Small library allowing to connect multiple forms to single Progress Bar component representing the current progress/states of the forms. 
 
+## Demo
+
+![CustomProgressBar](screenshots/custom_progress.gif)    
 
 ## Integration     
 
